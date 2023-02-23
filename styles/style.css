@@ -1,0 +1,26 @@
+.row {
+    border: solid 1px #000;
+    
+}
+
+body {
+  
+  
+}
+
+
+.centerButton {
+  text-align: center;
+}
+
+
+
+.gameOutput {
+  text-align: center;
+  font-family: 'Mukta', sans-serif;
+  font-size: 80px;
+}
+
+.ui-widget-content {
+  text-align: center;
+}
