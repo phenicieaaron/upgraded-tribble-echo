@@ -1,7 +1,41 @@
+
 $(function () {
   console.log("bring the cookie");
   
- 
+  const wrapper = document.getElementById("blob-wrapper");
+
+  const animateBubble = x => {  
+    const blob = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  
+    blob.className.baseVal = "blob";
+    blob.setAttributeNS(null, "style", `left: ${x - 250}px;`);
+    blob.setAttributeNS(null, "viewBox", "0 -4 14 4");
+  
+    path.setAttributeNS(null, "d", "m 0 0 v -1 q 3 0 5 -2 t 4 0 q 2 2 5 2 v 1 z");
+  
+    blob.appendChild(path);
+  
+    wrapper.appendChild(blob);
+  
+    setTimeout(() => wrapper.removeChild(blob), 1000);
+  }
+  
+  window.addEventListener("mousemove", function(e) {
+    animateBubble(e.clientX);
+  });
+  
+  window.addEventListener("touchmove", function(e) {
+    animateBubble(e.changedTouches[0].clientX);
+  });
+  
+  window.addEventListener("load", function(e) {
+    if (!navigator.userAgentData.mobile) {
+      document.getElementById("sub").firstChild.textContent = "Move your cursor!"
+    } else {
+      document.getElementById("sub").firstChild.textContent = "Touch, hold and move!"
+    }
+  });
 
   var $drag_counter = $( "#event-drag" ),
   counts = [ 0 ];
