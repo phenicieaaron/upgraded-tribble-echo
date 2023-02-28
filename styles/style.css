@@ -27,7 +27,7 @@ body {
   margin:0;
   overflow:hidden;
   background-color: rgb(var(--col-bg));
-  height: 100vh;
+  /* height: 100vh; */
   display: grid;
   place-items: center;
   
