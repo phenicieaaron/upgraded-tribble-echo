@@ -137,6 +137,10 @@ use {
   align-items: center;
 }
 
+p {
+  text-align: center;
+}
+
 h1, h4{
   color: white;
   text-align: center;
