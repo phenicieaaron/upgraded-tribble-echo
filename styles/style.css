@@ -120,11 +120,24 @@ use {
 }
 
 .card-body {
-  width: 1000px;
+  width: auto;
   height: auto;
 }
 
 .card-img-top {
   height: 150px;
-  width: auto;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.card {
+  align-items: center;
+}
+
+h1, h4{
+  color: white;
+  text-align: center;
 }
